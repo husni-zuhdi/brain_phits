@@ -1,0 +1,567 @@
+$ --------------------------------------------------------------
+$ REVISED ORNL PHANTOMS (10-YEAR-OLD)
+$ DEVELOPED BY EUNYOUNG, HAN
+$ THIS PHANTOM FILE IS FOR THE USE UNDER PERMISSION OF
+$ ALRADS AT UNIVERSITY OF FLORIDA.
+$ DISTRIBUTION OR MODIFI$ATION WITHOUT PERMISSION IS PROHIBITED. 
+$ --------------------------------------------------------------
+
+[ T i t l e ]
+Fosterior Fossa Boost Experiment on PHITS
+
+[ P a r a m e t e r s ]
+ icntl    =         8   # (D=0) 3:E$H 5:NOR 6:SR$ 7,8:GSH 11:DSH 12:DUMP
+ maxcas   =          50000     # (D=10) number of parti$les per one bat$h
+ maxbch   =           1     # (D=10) number of bat$hes
+ file(1)  = c:/phits        # (D=$:/phits) PHITS install folder name
+ file(6)  = phits.out       # (D=phits.out) general output file name
+ 
+[ S o u r C e ]
+totfact = 5.83432E+9 #(D=1.0) normalization fa$tor for total sour$e
+
+<source> = 1
+e0		= 80
+r0 		= 8 #radius [$m]
+s-type 	= 1
+proj 	= proton
+x0		= 0. #(D=0.0) $enter position of x-axis [$m]
+y0		= 0. #(D=0.0) $enter position of y-axis [$m]
+z0 		= -30. #minimum position of z-axis [$m]
+z1		= -30.
+dir 	= 1.0 #z-dire$tion of beam [$osine]
+trcl 	= 1
+
+[MATERIAL] 
+
+$ADULT TISSUES; TABLE A-1, P42 OF VOL. 1
+M2       1000  -0.07337 $SKELETON (RHO = 1.4 G/ML)
+         6000  -0.25475
+         7000  -0.03057
+         8000  -0.47893
+         9000  -0.00025
+        11000  -0.00326
+        12000  -0.00112
+        14000  -0.00002
+        15000  -0.05095
+        16000  -0.00173
+        17000  -0.00143
+        19000  -0.00153
+        20000  -0.10190
+        26000  -0.00008
+        30000  -0.00005
+        37000  -0.00002
+        38000  -0.00003
+        82000  -0.00001
+
+M4       6000  -0.000124 $AIR (RHO = 0.001205)
+         7000  -0.755267
+         8000  -0.231781
+        18000  -0.012827
+
+M5       1000  -0.088955 $UPPER FA$E REGION (RHO=1.22)
+         6000  -0.240690
+         7000  -0.027735
+         8000  -0.557090
+         9000  -0.000125
+        11000  -0.002190
+        12000  -0.000625
+        14000  -0.000160
+        15000  -0.026145
+        16000  -0.001885
+        17000  -0.001380
+        19000  -0.001805
+        20000  -0.051070
+        26000  -0.000065
+        30000  -0.000040
+        37000  -0.000015
+        38000  -0.000015
+        40000  -0.000010
+        82000  -0.000005
+
+M6      1000    -0.107 $BRAIN (RHO=1.04)
+        6000    -0.145
+        7000    -0.022
+        8000    -0.712
+        11000   -0.002
+        15000   -0.004
+        16000   -0.002
+        17000   -0.003
+        19000   -0.003
+
+M7      1000    -0.096 $EYES (RHO=1.07)
+        6000    -0.195
+        7000    -0.057
+        8000    -0.646
+        11000   -0.001
+        15000   -0.001
+        16000   -0.003
+        17000   -0.001
+
+M8      1000    -0.096 $LARNYX (RHO=1.10)
+        6000    -0.099
+        7000    -0.022
+        8000    -0.744
+        11000   -0.005
+        15000   -0.022
+        16000   -0.009
+        17000   -0.003
+
+M10      1000     -0.104 $THYROID(RHO=1.05)
+         6000     -0.119
+         7000     -0.024
+         8000     -0.745
+        11000     -0.002
+        15000     -0.001
+        16000     -0.001
+        17000     -0.002
+        19000     -0.001
+        53000     -0.001
+
+M11     1000    -0.1 $SKIN (RHO=1.09)
+        6000    -0.204
+        7000    -0.042
+        8000    -0.645
+        11000   -0.002
+        15000   -0.001
+        16000   -0.002
+        17000   -0.003
+        19000   -0.001
+$
+$ SOFT TISSUE  (RHO=1.03)
+M12     1000    -0.105
+        6000    -0.256
+        7000    -0.027
+        8000    -0.602
+        11000   -0.001
+        15000   -0.002
+        16000   -0.003
+        17000   -0.002
+        19000   -0.002
+$
+$ SKELETAL MUS$LE   (RHO=1.05)
+M13     1000    -0.102
+        6000    -0.143
+        7000    -0.034
+        8000    -0.71
+        11000   -0.001
+        15000   -0.002
+        16000   -0.003
+        17000   -0.001
+        19000   -0.004
+		
+m14	13027 -0.0034
+	26056 -0.0025
+	29063 -0.5775
+	30065 -0.3821
+	82207 -0.0345 $Brass (8.5 g/cm3)
+  
+m15 #Kompensator=plastic (1.18 g/cm3)
+1H -0.107 #Hidrogen (H) 
+	12C -0.143 #Karbon (C)
+	16O -0.713 #Oksigen (O)
+	
+[ SURFACE ]
+1     PX 0
+2     PY 0
+3     PZ 0
+
+1011 rpp -10 10 23 25 50 80
+1012 SQ .2214427437E-1 .1321178490E-1 .3868190979E-1 0 0 0 -1 0 26.5 66.4
+1013 rpp -10 10 19 23 50 80
+1014 SQ .2214427437E-1 .1951178490E-1 .1868190979E-1 0 0 0 -1 0 27.5 66.2
+
+
+$1.0 HEAD AND NECK REGION
+    $1.1 THE SKIN OF HEAD
+501 sq 0.1876524677E-1 0.1161192034E-1 0 0 0 0 -1 0 0 0 	$SKIN IN THE FACE
+502 sq 0.1929012346E-1 0.1186628126E-1 0 0 0 0 -1 0 0 0
+504 PY 4.54
+505 PY 4.64
+506 PZ 54.43
+507 PZ 54.53
+508 PZ 66.98
+
+509 SQ .1876524677E-1 .1161192034E-1 .3188775511E-1 0 0 0 -1 0 0 66.98 $SKIN IN THE TOP OF THE HEAD
+510 SQ .1929012346E-1 .1186628126E-1 .3305785123E-1 0 0 0 -1 0 0 66.98
+
+511 SQ 1 1 0 0 0 0 -20.07040000 0 2.21 0 $ SKIN IN THE NECK
+512 SQ 1 1 0 0 0 0 -19.18440000 0 2.21 0
+513 PZ 50.8
+
+515 K/Z 0 2.21  32.72189189 .4259043508E-1 $ SKIN IN THE BACK OF THE HEAD
+516 K/Z 0 2.21  33.47555985 .4327736649E-1
+
+	$ 1.2  THE CRANIUM
+522 SQ .2169004492E-1 .1300172012E-1 .3859796742E-1 0 0 0 -1 0 0 66.98 $CRANIUM_INNER SURFACE
+523 SQ .2169004492E-1 .1300172012E-1 .2714079832E-1 0 0 0 -1 0 0 66.98
+524 P 0 .6921322690 1 60.91
+525 PY 0
+
+526 SQ .1929012346E-1 .1186628126E-1 .3305785123E-1 0 0 0 -1 0 0 66.98 $CRANIUM_OUTER SURFACE
+527 SQ .1929012346E-1 .1186628126E-1 .2381496724E-1 0 0 0 -1 0 0 66.98
+528 P 0 .7058823531 1 60.50
+		
+	$ 1.3  TEETH
+529 SQ .5458992051E-1 .4268834094E-1 0 0 0 0 -1 0 -3.79 0
+530 SQ .9765625000E-1 .5165289257E-1 0 0 0 0 -1 0 -3.79 0
+531 PZ 56.76
+532 PZ 59.25
+533 PY -3.79
+
+	$ 1.4  MANDIBLE
+534 SQ .2824659276E-1 .3829642195E-1 0 0 0 0 -1 0 -3.79 0
+535 SQ .9888849333E-1 .7631024693E-1 0 0 0 0 -1 0 -3.79 0
+536 PZ 55
+537 SQ .6474629165E-1 .1871394057E-1 0 0 0 0 -1 0 -3.79 0
+
+	$ 1.5  UPPER FACE REGIONS
+538 SQ .2411172408E-1 .1237315964E-1 0 0 0 0 -1 0 0 0
+
+	$ 1.6  EYES
+539 SQ 1 1 1 0 0 0 -1.2996  3.10 -7.00 63.68
+540 SQ 1 1 1 0 0 0 -1.2996 -3.10 -7.00 63.68
+
+	$ 1.7  BRAIN
+541 SQ .2214427437E-1 .1321178490E-1 .3968190979E-1 0 0 0 -1 0 0 66.98
+542 SQ .2214427437E-1 .1321178490E-1 .2777777779E-1 0 0 0 -1 0 0 66.98
+543 P 0 .6896551722 1 60.98
+
+	$PTV BRAIN
+5000 py 4
+
+	$ 1.8 SPINE IN HEAD AND NE$K
+545 SQ 0.212364 0.358564 0 0 0 0 -1 0 3.62 0
+
+	$ 1.9 SPHENOID SINUS
+600 SQ 2.214427437 1.126933253 3.416689158 0 0 0 -1   1.2 -4.9 63.08
+601 SQ 2.214427437 1.126933253 3.416689158 0 0 0 -1  -1.2 -4.9 63.08
+	
+	$ 1.10 ETHMOID SINUS
+602 SQ  8.401596305 1.148779594 1.516658983 0 0 0 -1   1.166 -6.7 63.48
+603 SQ  8.401596305 1.148779594 1.516658983 0 0 0 -1  -1.166 -6.7 63.48
+	$ 1.11 FRONTAL SINUS
+604 SQ 1.148779594 3.416689158 .5462662972 0 0 0 -1   1.5 -8.0 64.7
+605 SQ 1.148779594 3.416689158 .5462662972 0 0 0 -1  -1.5 -8.0 64.7
+
+	$ 1.12 MAXILLARY SINUS
+606 S  2.9 -6.2 60.98 1.349
+607 S -2.9 -6.2 60.98 1.349
+
+	$ 1.13 PHARYNX
+563 C/Z 0 2.43 0.99
+564 C/Z 0 2.43 0.757
+565 PZ 60.5
+
+568 C/Z 0 2.43 0.846
+
+	$ 1.14 LARYNX
+557 C/Z 0 0.5 0.497
+558 C/Z 0 0.5 0.73
+559 PZ 51.34
+
+571 C/Z 0 0.5 0.586
+
+	$ 1.15 TRA$HEA
+	
+$ CHANGE +Z DIRECTION 0.907CM UP FOR MAKING ROOM FOR MAIN BRONCHI...
+560 C/Z 0 0.5 0.9
+561 C/Z 0 0.5 0.648
+$ 562 PZ 44.293
+562 PZ 45.2
+572 C/Z 0 0.5 .699
+
+	$ 1.16 THYROID
+
+548 C/Z 0 0.5 1.46
+549 C/Z 0 0.5 0.73
+550  P   .5161879503 -.1618795027E-1 54.43 0 -0.23 51.7075 0 -1.10 52.8
+551  P  -.5161879503 -.1618795027E-1 54.43 0 -0.23 51.7075 0 -1.10 52.8
+552  P   .5161879503 -.1618795027E-1 50.80 0 -0.23 51.7075 0 -1.10 52.2538
+553  P  -.5161879503 -.1618795027E-1 50.80 0 -0.23 51.7075 0 -1.10 52.2538
+554 PY 0.50
+555 PZ 51.70750000
+556 PZ 50.8
+
+	$ 1.17 NOSE
+
+608 P 0 -9.28 63.4 -1.39 -9.110217480 58.98 0 -10.325 61.19
+609 P 0 -9.28 63.4  1.39 -9.110217480 58.98 0 -10.325 61.19
+610 P 0 -11.37 58.98 -1.39 -9.110217480 58.98 1.39 -9.110217480 58.98
+
+611 P 0 -9.65 63.4  -1.76 -9.006252053 58.98  0 -10.695 61.19
+612 P 0 -9.65 63.4   1.76 -9.006252053 58.98  0 -10.695 61.19
+613 P 0 -11.37 58.62 -1.39 -9.110217480 58.62 1.39 -9.110217480 58.62
+
+614 PX -0.187
+615 PX  0.187
+
+624 PY -8.4
+
+	$ 1.19 SALIVERY GLANDS
+		$ 1.19.1 PAROTIDS GLANDS
+636 SQ 3.156067997 0.2799473699 0 0 0 0  -1  1.825 -1.895 61.13
+641 SQ 3.156067997 0.2799473699 0 0 0 0  -1 -1.825 -1.895 61.13
+		$ 1.19.2 SUBMANDIBULAR GLANDS
+637 C/Z   1.7 -2.64 1.247
+638 PZ 56.279
+642 C/Z  -1.7 -2.64 1.247
+		$ 1.19.3 SUBLINGUAL GLANDS
+639 C/Y  0.58 56.279 0.48
+640 PY  -7.1
+643 C/Y -0.58 56.279 0.48
+
+$ 2.0  SKELETON
+	$ 2.1  SPINE (1983 /$&E)
+		$ 70    SQ .5175715542 .2267573696 0 0 0 0 -1 0 4.62 0
+70      SQ .2267573696 .5175715542 0 0 0 0 -1 0 4.82 0
+71      PZ 15.97
+72      PZ 25.47
+73      PZ 50.80
+74      PZ 59.89
+	
+$      AIR $YLINDER SURROUNDING THE PHANTOM
+400      SO 500
+
+
+[ C E L L ]
+
+
+1000    -1  400
+1001    4 -0.00125 -400 #1 #2 #3 #4 #5 #7 #5000 #8 #9 #12 #13 #14 #15 #16 #17 #18 #22 #24 #25 #27 #56 #50 #60 #1011 #1012
+			#1013 #1014
+
+1011 14 -8.5 -1011 1012 #1012
+1012 4 -0.00125 -1011 -1012
+1013 15 -1.18 -1013 1014 #1014
+1014 4 -0.00125 -1013 -1014
+
+$ 1.0 HEAD AND NECK
+1 11 -1.09   ((-509 510):-508)-501 513 (502:505:508:(-507 512)) (506:(-511 512):-513)(-506:508:-505:(-515 70 516):(502 -501 -516)) #8 #9 #2 	$1.1 THE SKIN OF HEAD AND NE$K ^
+2 2 -1.4 (522 -526 508):(523 -527 524 528 -508):(-527 -524 528 -508) 		$1.2 THE CRANIUM
+3 2 -1.4  -529 530 531 -532 -533 		$1.3 THE TEETH
+4 2 -1.4     (-534 536((535 -531 -533):(537 -528 533 -525))) 	$1.4 THE MANDIBLE
+
+$ 1.5 NASAL CAVITY (THE UPPER FACE REGION)
+5 5 -1.22     -538 532 -528 -533 539 540
+	$ REMOVE SPHENOID SINUS
+				 (600 601)
+	$ REMOVE ETHMOID SINUS
+				 (602 603)
+	$ REMOVE FRONTAL SINUS
+				 (604 605)
+	$ REMOVE MAXILLARY SINUS
+				 (606 607)
+				 
+$ 1.7 THE BRAIN
+7 6 -1.04 ((508 -541):(-508 -542 543)) -5000
+5000 6 -1.04 ((508 -541):(-508 -542 543)) 5000 $ptV
+
+$ 1.8 THE EYES
+8 7 -1.07    -539 	$LEFT
+9 7 -1.07    -540 	$RIGHT
+
+$ 1.13 TOTAL SINUSES
+12 4 -0.001205  (-600:-601:-602:-603:-604:-605:-606:-607) 
+
+$1.13 PHARYNX
+13 13 -1.05 -563 568 513 -565 	$ RESIDUAL WALL
+14 4 -0.001205 -564 513 -565	$ CONTENTS
+15 13 -1.05     -568 564 513 -565 	$ MUCOSA WALL
+
+$ 1.14 LARYNX
+16 8 -1.1      571 -558 559 -506 	$ RESIDUAL WALL
+17 4 -0.001205   -557 559 -506		$ CONTENT
+18 8 -1.1      557 -571 559 -506	$ MUCOSA WALL
+        
+$ 1.15 TRACHEA
+$19 12 -1.03       572 -560 562 -559		$ RESIDUAL WALL
+$20 4 -0.001205  -561 562 -559	$ CONTENT
+$21 12 -1.03      561 -572 562 -559 $ MUCOSA WALL
+
+$ 1.16 THYROID
+22  10 -1.05     (1 -506  555 -548 549 -550 -554):
+                (-1 -506  555 -548 549 -551 -554):
+               (1 556 -555 -548 549  552 -554 (559 : 560)):
+               (-1 556 -555 -548 549  553 -554 (559 : 560))
+       
+$ 1.17 NOSE 
+24 4 -0.001205   -608 -609 613 501 -624 	$ CONTENTS
+		$ REMOVE CENTER TISSUE
+		(-614:615)
+25 13 -1.05   -611 -612 613 501 -624 (-615:609)(614:608)		$ NOSE WALL
+       
+$ 1.18 ORAL CAVITY (SOFT TISSUE BEHIND MOUTH AND TEETH)
+27  12 -1.03  (((-537 536 -528 533 -525)
+                  :(-533 -530 531 -532)
+                  :(-533 -535 -531 536))
+             ((636 641):-531:565)((637 642):638:-536)((639 643):-640:533))
+
+$ 1.19 SALIVERY GLANDS 
+	$ LEFT & RIGHT PAROTID
+		$ 51 1 -1.04  (-636 : -641) 531 -565
+	$           VOL = 25
+	$ LEFT & RIGHT SUBMANDIBULAR
+		$ 53 1 -1.04  (-637 : -642) -638 536
+	$           VOL = 12.5
+	$
+	$ LEFT & RIGHT SUBLINGUAL
+		$ 55 1 -1.04  (-639 : -643) 640 -533
+	$            VOL=4.808
+	
+$ TOTAL SALIVERY GLANDS
+56 12 -1.03  (((-636 : -641) 531 -565):((-637 : -642) -638 536):
+               ((-639 : -643) 640 -533))
+              
+$ 1.19 MUSCLE PART OF HEAD AND NE$K ^
+50 13 -1.05     (-510:-508) -502 513 (507:-512:-513) (-505:508:-506:-516)
+
+	$     REMOVE CRANIUM
+			(-522:526:-508)(-523:527:-524:-528:508)(527:524:-528:508)
+	$     REMOVE TEETH
+			(529:-530:-531:532:533)
+	$     REMOVE MANDIBLE
+			(534:-535:-536:531:533)(534:-537:-536:528:-533:525)
+	$     REMOVE NASAL CAVITY
+			(538:-532:528:533:-539:-540)
+	$     REMOVE SPINE IN THE HEAD AND NE$K
+			(70:74:-73)
+	$     REMOVE BRAIN
+			(-508:541)(508:542:-543)
+	$     REMOVE EYES
+			(539 540)
+	$     REMOVE LARYNX
+			(558:-559:506)
+	$     REMOVE TRACHEA
+			(560:-562:559)
+	$     REMOVE PHARYNX
+			(563:-513:565)
+	$     REMOVE THYROID
+				 #22
+	$     REMOVE ORAL CAVITY
+				 #27
+	$     REMOVE SALIVARY GLANDS
+				 #56
+      
+$ 2.0  SKELETON REGION
+$ 2.1   SPINE
+$     2.1.1  CERVICAL VERTERBRA - $V
+$
+60     2 -1.4        -70 -74 73
+$                 VOL=83.5714
+$
+$     2.1.2  THORACIC VERTERBRA - TV
+$
+$61     2 -1.4        -70 -73 72
+ $                VOL=232.2839259
+$
+$     2.1.3  LUMBER VERTERBRA - LV
+$
+$62     2 -1.4        -70 -72 71
+  $               VOL=87.14285714
+$
+$        2.1.4  ENTIRE SPINE (CRISTY & EKERMAN)
+$
+$63    2 -1.4        -70 -73 71
+$                 VOL=403
+
+[VOLUME]
+reg vol
+1 114.7 
+2 250.2
+3 26.0
+4 139.4
+5 194.8537836
+7 1264.4
+8 6.2
+9 6.2
+12 31.34621637
+13 8.056693173
+14 17.46277933
+15 4.347554607
+16 1.839614311
+17 2.397845129
+18 .9356786608
+19 6.199587364
+20 8.099687357
+21 1.325122186
+22 7.6
+24 3.4517
+25 5.25608
+27 239.692
+56 42.308
+50 1028.114
+
+[ TRANSFORM ]
+*tr1 0 0 67 0 0 90 0 0 0 0 0 0 2
+
+[ T - T r a c k ]
+     mesh =  xyz            # mesh type is xyz scoring mesh
+   x-type =    1            # x-mesh is linear given by xmin, xmax and nx
+       nx =  1            # number of x-mesh points
+          -0.1  0.0      
+   y-type =    2            # y-mesh is given by the below data
+       ny =   200           # number of y-mesh points
+       ymin =  2.           # minimum value of x-mesh points
+       ymax =   10.
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+       nz =   200           # number of z-mesh points
+     zmin =  60.           # minimum value of z-mesh points
+     zmax =   75.           # maximum value of z-mesh points
+     part =  proton      
+   e-type =    1            # e-mesh is given by the below data
+       ne =    1            # number of e-mesh points
+            0.0  1000.0
+     unit =    1            # unit is [1/cm^2/source]
+     axis =   yz            # axis of output
+     file = track_yz.out  # file name of output for the above axis
+    title = Track Detection using [T-track] tally
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL
+   
+[ T - T r a c k ]
+     mesh =  xyz            # mesh type is xyz s$oring mesh
+   x-type =    2            # x-mesh is linear given by xmin, xmax and nx
+       nx =   500            # number of x-mesh points
+     xmin =  -10.           # minimum value of x-mesh points
+     xmax =   10.           # maximum value of x-mesh points
+   y-type =    2            # y-mesh is linear given by ymin, ymax and ny
+       ny =   500            # number of y-mesh points
+     ymin =  -15.           # minimum value of y-mesh points
+     ymax =   30.           # maximum value of y-mesh points
+   z-type =    1            # z-mesh is given by the below data
+       nz =    1            # number of z-mesh points
+           65.  65.1
+   e-type =    1            # e-mesh is given by the below data
+       ne =    1            # number of e-mesh points
+            0.0  2500.0
+     unit =    1            # unit is [1/$m^2/sour$e]
+     axis =   xy            # axis of output
+     file = track_xy.out  # file name of output for the above axis
+     part =  proton      
+    gshow =    1           # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+   epsout =    1            # (D=0) generate eps file by ANGEL 
+ 
+ [ T - Deposit ] #3-Depth-Dose
+	title = Kurva Kedalaman-Dosis
+	mesh = xyz #mesh type is xyz scoring mesh
+	y-type = 2 #y-mesh is given by the below data
+	 ny = 100 #number of y-mesh points
+	 ymin = 0.
+	 ymax = 10.
+	z-type = 1 #z-mesh is given by the below data
+	 nz = 1 #number of z-mesh points
+	 60 73
+	x-type = 1 #x-mesh is linear given by xmin, xmax and nx
+	 nx = 1 #number of x-mesh points
+	-5.2 5.2
+	unit = 0 #unit is [Gy/source]
+	material = all #(D=all) number of specific material
+	output = dose #total deposit energy
+	axis = y #axis of output
+	file = depthdose.out #file name of output for the above axis
+	part = proton
+	gshow = 3 #0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat
+	epsout = 1 #(D=0) generate eps file by ANGEL
+	#angel = ymin(1.E-2) ymax(1.E-0)
+	
+ [END]

@@ -1,15 +1,14 @@
 #!/bin/bash
 
 # Change energy
-
-# 
 # for i in {50..100..1}
+mkdir results
 for i in {50..100..1}
 do
-cd ~/phits/running
+cd ~/phits
 mkdir  "results/testing-$i"
-cp head.inp "results/testing-$i/head.inp"
+cp TA.inp "results/testing-$i/TA.inp"
 cd "results/testing-$i"
-sed -i "s/e0          = 125/e0= $i/" head.inp
+sed -i "s/e0		= 80/e0		= $i/" TA.inp
 echo "Start simulating $i Energy"
 done
