@@ -5,7 +5,7 @@
 mkdir results
 for i in {50..100..1}
 do
-cd ~/brain_phits
+cd /home/mohmiftakhuldwi99_mail_ugm_ac_id/brain_phits
 mkdir  "results/testing-$i"
 cp TA.inp "results/testing-$i/TA.inp"
 cd "results/testing-$i"
