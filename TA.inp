@@ -10,7 +10,7 @@ $ --------------------------------------------------------------
 Fosterior Fossa Boost Experiment on PHITS
 
 [ P a r a m e t e r s ]
- icntl    =         8   # (D=0) 3:E$H 5:NOR 6:SR$ 7,8:GSH 11:DSH 12:DUMP
+ icntl    =         0   # (D=0) 3:E$H 5:NOR 6:SR$ 7,8:GSH 11:DSH 12:DUMP
  maxcas   =          50000     # (D=10) number of parti$les per one bat$h
  maxbch   =           1     # (D=10) number of bat$hes
  file(1)  = c:/phits        # (D=$:/phits) PHITS install folder name
@@ -481,9 +481,9 @@ reg vol
 16 1.839614311
 17 2.397845129
 18 .9356786608
-19 6.199587364
-20 8.099687357
-21 1.325122186
+$19 6.199587364
+$20 8.099687357
+$21 1.325122186
 22 7.6
 24 3.4517
 25 5.25608
