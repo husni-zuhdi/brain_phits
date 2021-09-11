@@ -3,7 +3,7 @@
 # Change energy
 # for i in {50..100..1}
 mkdir results
-for i in {50..51..1}
+for i in {50..100..1}
 do
 cd /home/mohmiftakhuldwi99_mail_ugm_ac_id/brain_phits
 mkdir  "results/testing-$i"
