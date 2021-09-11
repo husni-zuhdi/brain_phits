@@ -11,5 +11,5 @@ cp TA.inp "results/testing-$i/TA.inp"
 cd "results/testing-$i"
 sed -i "s/e0		= 80/e0		= $i/" TA.inp
 echo "Start simulating $i Energy"
-sudo phits.sh TA.inp
+phits.sh TA.inp
 done
