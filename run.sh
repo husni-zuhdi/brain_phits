@@ -12,6 +12,5 @@ cd "results/testing-$i"
 sed -i "s/e0		= 80/e0		= $i/" TA.inp
 echo "Start simulating $i Energy"
 phits.sh TA.inp
-cd ..
-gsutil cp -r "testing-$i" "gs://phits-head/testing-$i"
+gsutil cp depthdose.out "gs://phits-head/depthdose/depthdose-$i.out"
 done

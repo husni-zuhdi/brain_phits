@@ -5,6 +5,8 @@ $ THIS PHANTOM FILE IS FOR THE USE UNDER PERMISSION OF
 $ ALRADS AT UNIVERSITY OF FLORIDA.
 $ DISTRIBUTION OR MODIFI$ATION WITHOUT PERMISSION IS PROHIBITED. 
 $ --------------------------------------------------------------
+$OMP=8
+
 
 [ T i t l e ]
 Fosterior Fossa Boost Experiment on PHITS
