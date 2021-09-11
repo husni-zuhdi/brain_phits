@@ -10,11 +10,11 @@ $ --------------------------------------------------------------
 Fosterior Fossa Boost Experiment on PHITS
 
 [ P a r a m e t e r s ]
- icntl    =         0   # (D=0) 3:E$H 5:NOR 6:SR$ 7,8:GSH 11:DSH 12:DUMP
- maxcas   =          50000     # (D=10) number of parti$les per one bat$h
- maxbch   =           1     # (D=10) number of bat$hes
- file(1)  = c:/phits        # (D=$:/phits) PHITS install folder name
- file(6)  = phits.out       # (D=phits.out) general output file name
+ icntl    =         0                                                   # (D=0) 3:E$H 5:NOR 6:SR$ 7,8:GSH 11:DSH 12:DUMP
+ maxcas   =          50000                                              # (D=10) number of parti$les per one bat$h
+ maxbch   =           1                                                 # (D=10) number of bat$hes
+ file(1)  = /home/mohmiftakhuldwi99_mail_ugm_ac_id/phits/phits          # (D=$:/phits) PHITS install folder name
+ file(6)  = phits.out                                                   # (D=phits.out) general output file name
  
 [ S o u r C e ]
 totfact = 5.83432E+9 #(D=1.0) normalization fa$tor for total sour$e
